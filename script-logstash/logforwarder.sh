@@ -8,7 +8,9 @@
 # Khai bao bien
 
 # Thay IP hop ly voi may ban
-IP_SRV_LOG=172.16.69.94
+# Cai tien cho phep nhap Log Server
+read -p"Nhap host duoc phep SSH: " ip_log_srv
+# IP_SRV_LOG=172.16.69.94
 
 echo "##### Chuan bi cai dat #####"
 echo 'deb http://packages.elasticsearch.org/logstashforwarder/debian stable main' | sudo tee /etc/apt/sources.list.d/logstashforwarder.list
@@ -37,7 +39,7 @@ echo "##### Tao file cau hinh cho Logstash Forwader #####"
 cat << EOF >>  /etc/logstash-forwarder
 {
   "network": {
-    "servers": [ "$IP_SRV_LOG:5000" ],
+    "servers": [ "$ip_log_srv:5000" ],
     "timeout": 15,
     "ssl ca": "/etc/pki/tls/certs/logstash-forwarder.crt"
   },
