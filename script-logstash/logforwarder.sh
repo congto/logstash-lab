@@ -16,7 +16,7 @@ echo "##### Chuan bi cai dat #####"
 echo 'deb http://packages.elasticsearch.org/logstashforwarder/debian stable main' | sudo tee /etc/apt/sources.list.d/logstashforwarder.list
 
 sudo apt-get update
-sudo apt-get install logstash-forwarder
+sudo apt-get install logstash-forwarder -y
 
 sleep 7
 echo "##### Cau hinh khoi dong logstash cung OS #####"
