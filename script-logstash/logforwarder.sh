@@ -18,10 +18,9 @@ sudo apt-get install logstash-forwarder
 
 sleep 7
 echo "##### Cau hinh khoi dong logstash cung OS #####"
-cd /etc/init.d/; sudo wget https://raw.github.com/elasticsearch/logstash-forwarder/master/logstash-forwarder.init -O logstash-forwarder
+cd /etc/init.d/; sudo wget https://raw.githubusercontent.com/congto/logstash-lab/master/script-logstash/logstash-forwarder.init -O logstash-forwarder
 sudo chmod +x logstash-forwarder
 sudo update-rc.d logstash-forwarder defaults
-
 
 # Luu y, buoc nay dung scp day tu may Log Server sang theo cu phap
 scp /etc/pki/tls/certs/logstash-forwarder.crt user@server_private_IP:/tmp
