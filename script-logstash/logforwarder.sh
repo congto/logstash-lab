@@ -9,7 +9,7 @@
 
 # Thay IP hop ly voi may ban
 # Cai tien cho phep nhap Log Server
-read -p"Nhap host duoc phep SSH: " ip_log_srv
+read -p"Nhap IP cua LOG SRV: " ip_log_srv
 # IP_SRV_LOG=172.16.69.94
 
 echo "##### Chuan bi cai dat #####"
