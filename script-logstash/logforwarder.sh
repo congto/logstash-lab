@@ -50,6 +50,12 @@ cat << EOF >>  /etc/logstash-forwarder
         "/var/log/auth.log"
        ],
       "fields": { "type": "syslog" }
+    },
+    {
+      "paths": [
+        "/var/log/apache2/access.log"
+       ],
+      "fields": { "type": "apache-access" }
     }
    ]
 }
