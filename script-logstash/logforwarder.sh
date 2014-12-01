@@ -25,7 +25,7 @@ sudo chmod +x logstash-forwarder
 sudo update-rc.d logstash-forwarder defaults
 
 # Luu y, buoc nay dung scp day tu may Log Server sang theo cu phap
-scp /etc/pki/tls/certs/logstash-forwarder.crt user@server_private_IP:/tmp
+# scp /etc/pki/tls/certs/logstash-forwarder.crt user@server_private_IP:/tmp
 
 sleep 3
 echo "##### Copy cert cho Logstash Forwarder #####"
